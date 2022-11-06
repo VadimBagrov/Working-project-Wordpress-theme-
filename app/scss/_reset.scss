@@ -30,6 +30,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-size: inherit; //Если фонт сайз не задан то наследуется от родителя
 }
 
 ul[class] {

@@ -11,10 +11,16 @@
         align-items: center;
         height: 120px;
     }
+    &__btn{
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer; //Изменение курсора при наведении
+    }
 }
 
 .logo {
-    margin:0 auto;
+    margin:0 auto; //Отдаляет от себя блоки
 }
 
 .menu {
@@ -22,8 +28,166 @@
     &__list {
         display: flex;
     }
-    &__list-item{
+    &__list-item {
         padding-left: 35px;
         padding-right: 45px;
+    }
+    &__list-link {
+        @extend %title-font;
+        color :rgba(54, 56, 56, 0.9);
+        line-height: 22px;
+    }
+    // &__list-item + .menu__list-item {
+    //     padding-left: 80px;
+    // } //Отдаляем только второй list-item и там и там
+}
+
+.footer {
+    &__content {
+        background-color: #DFDFDF;
+        padding: 60px 0 80px;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__info {
+        width: 540px;
+    }
+    &__info-title {
+        color: $title;
+        @extend %title-font;
+        margin-bottom: 14px;
+        line-height: 23px;
+    }
+    &__info-text {
+        margin-bottom: 16px;
+        width: 475px;
+    }
+    &__info-email {
+        font-weight: 600;
+        font-size: 14px;
+        color: $title;
+        margin-bottom: 22px;
+        padding-left: 30px;
+        display: inline-block;
+        position: relative;
+        &::before{
+            content: '';
+            background-image: url(../images/envelope.svg);
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 16px;
+            height: 12px;
+        }
+    }
+    &__form {
+        display: flex;
+    }
+    &__form-input{
+        padding: 6px 10px 6px 18px; //Отступы внутри кнопки
+        border-radius: 21px; //Скругление
+        background-color: transparent;
+        border: 1px solid rgba($title, .7); //полупрозрачный бордер,но не текст при вводе
+        width: 100%;
+        &::placeholder{
+            font-weight: 400;
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 27px;
+            color: #A1A1A1;
+        }
+    }
+    &__form-button{
+        background-color: $title;
+        border: none;
+        color: #fffff0;
+        border-radius: 21px;
+        font-weight: 600;
+        padding: 6px 12px;
+        min-width: 160px; //Размер для кнопки
+        margin-left: 9px;
+        cursor: pointer;
+    }
+    &__social{
+        width: 125px; //Тоже дал запас(нужно считать)
+        margin-right: auto;
+        margin-left: 100px;
+    }
+    &__social-link{
+        padding-left: 28px; //Отступ для изображения
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &__social-link--facebook::before{
+        background-image: url(../images/facebook.svg);
+    }
+    &__social-link--instagram::before{
+        background-image: url(../images/instagram.svg);
+        width: 14px;
+        height: 14px;
+        top: 4px;
+    }
+    &__social-link--pinterest::before{
+        background-image: url(../images/pinterest.svg);
+    }
+    &__social-link--whatsapp::before{
+        background-image: url(../images/whatsapp.svg);
+        width: 14px;
+        height: 14px;
+    }
+    &__social-link--youtube::before{
+        background-image: url(../images/youtube.svg);
+        width: 18px;
+        height: 12px;
+        top: 4px;
+    }
+
+    &__social-item,
+    &__menu-item{
+        margin-bottom: 15px;
+        font-size: 14px;
+        font-weight: 600;
+    }
+    &__social-link,
+    &__menu-link {
+        color: #707070;
+    }
+    &__menu {
+        margin-right: 60px;
+        width: 125px; //Дали доп.пространство из-за последней строчки,но ограничили чтобы не заскакивало
+    }
+
+    &__copyright {
+        background-color: $title;
+        color:#A1A1A1;
+        text-align: center;
+        padding: 42px 0px 41px;
+    }
+}
+
+.rightside-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    max-width: 694px;
+    background-color: #fff;
+    padding-top: 40px;
+    &__close {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        margin-left: 50px;
+        margin-bottom: 60px;
     }
 }
