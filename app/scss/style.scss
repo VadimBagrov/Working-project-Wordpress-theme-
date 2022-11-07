@@ -180,8 +180,12 @@
     top: 0;
     bottom: 0;
     max-width: 694px;
+    width: 100%;
     background-color: #fff;
     padding-top: 40px;
+    &.rightside-menu--close{
+        transform: translateX(1000%); //Убирает в сторону,а при нажатии на кнопку выведет меню сбоку
+    }
     &__close {
         background-color: transparent;
         border: none;
@@ -189,5 +193,26 @@
         cursor: pointer;
         margin-left: 50px;
         margin-bottom: 60px;
+    }
+    &__content {
+        text-align: center;
+        max-width: 485px;
+        margin: 0 auto;
+    }
+    &__logo {
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+    &__title {
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 51px;
+    }
+    &__text {
+        margin-bottom: 75px;
+    }
+    &__images {
+        max-width: 485px;
     }
 }
