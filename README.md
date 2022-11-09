@@ -1,2 +1,3 @@
 # Designer-Furniture-Website
-Large design furniture site with lots of technology
+Multi-page design furniture website
+Uses HTML , SCSS , JS , Gulp build , BEM modules and cool libraries
