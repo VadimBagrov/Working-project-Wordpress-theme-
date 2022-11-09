@@ -15,3 +15,9 @@ $(function () {
         autoplay: true //Автоматически меняется слайд(стандарт 3 сек)
     }) //Активация слайдера(slick-carousel)
 }); //Появляющиеся сбоку меню on/off
+
+var mixer = mixitup('.gallery__inner' , {
+    load : {
+        filter: '.living'
+    } //Чтобы автоматические филтровался сразу Ливинг раздел
+});
