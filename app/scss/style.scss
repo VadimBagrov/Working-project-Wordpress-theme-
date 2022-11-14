@@ -40,6 +40,20 @@
     // &__list-item + .menu__list-item {
     //     padding-left: 80px;
     // } //Отдаляем только второй list-item и там и там
+    &__list-link--active {
+        padding-bottom: 4px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            border-radius: 1px;
+            background-color: rgba($title, .7);
+        }
+    }
 }
 
 .footer {
@@ -63,24 +77,6 @@
     &__info-text {
         margin-bottom: 16px;
         width: 475px;
-    }
-    &__info-email {
-        font-weight: 600;
-        font-size: 14px;
-        color: $title;
-        margin-bottom: 22px;
-        padding-left: 30px;
-        display: inline-block;
-        position: relative;
-        &::before{
-            content: '';
-            background-image: url(../images/envelope.svg);
-            position: absolute;
-            top: 8px;
-            left: 0;
-            width: 16px;
-            height: 12px;
-        }
     }
     &__form { //Форма отправки сообщения на email
         display: flex;
@@ -150,7 +146,6 @@
         height: 12px;
         top: 4px;
     }
-
     &__social-item,
     &__menu-item{
         margin-bottom: 15px;
@@ -173,6 +168,8 @@
         padding: 42px 0px 41px;
     }
 }
+
+
 
 .rightside-menu { //Выезжающее меню
     z-index: 5;
@@ -234,6 +231,28 @@
     }
 }
 
+//Хлебные крошки(переход на страницу назад)
+.breadcrumbs {
+    background: rgba(#DFDFDF, .5);
+    padding: 13px 14px;
+    position: relative;
+    z-index: 999;
+    &__list {
+        display: flex;
+    }
+    &__item::after {
+        content: '/';
+        margin-left: -4px;
+        margin-right: 4px;
+    }
+    &__item:last-child::after {
+        display: none;
+    }
+    &__link{
+        font-size: 14px;
+        color: $default;
+    }
+}
 
 .top {
     &__inner {
@@ -289,7 +308,7 @@
 
 .new-collection { //Блок с коллекцией(заголовок и текст)
     text-align: center;
-    padding: 45px 0 105px;
+    padding: 45px 0 35px;
     &__title {
         color: $title;
         font-size: 36px;
@@ -320,6 +339,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 30px;
+    padding-bottom: 70px;
     &__item {
         position: relative;
         &:hover{ //Появление при наведении трафарета
@@ -515,6 +535,15 @@
         max-width: 1150px;
         height: 100%;
     }
+    &.gallery-page {
+        .gallery__item img {
+            max-height: 1165px;
+        }
+        .gallery__item:nth-child(8) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
 }
 
 .blog-box { //Секция с блоком о блогах
@@ -553,5 +582,269 @@
         font-size: 24px;
         line-height: 38px;
         @extend %title-font;
+    }
+}
+
+//Страница about
+.about {
+    &__prev {
+        background-image: url(../images/about-bg.jpg);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        text-align: center;
+        padding: 160px 0;
+        margin-top: -53px;
+    }
+    &__prev-title {
+        color: $title;
+        @extend %title-font;
+        font-size: 60px;
+        line-height: 80px;
+    }
+    &__content {
+        padding: 130px 0 40px;
+    }
+    &__title {
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        padding-bottom: 22px;
+        margin-bottom: 22px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 200px;
+            height: 1px;
+            background-color: #6D7278;
+        }
+    }
+    &__text {
+        padding-left: 284px;
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    &__popup {
+        background-image: url(../images/popup-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        min-height: 414px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.inspiration {
+    padding-top: 100px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../images/inspiration-bg.png);
+        height: 362px;
+        z-index: -1;
+    }
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__images {
+        margin-right: 78px;
+        margin-left: -230px;
+    }
+    &__title {
+        font-size: 36px;
+        line-height: 60px;
+        color: $title;
+        @extend %title-font;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background: #6D7278;
+            width: 200px;
+            height: 1px;
+        }
+    }
+    &__text {
+        margin-bottom: 30px;
+    }
+    &__content {
+        max-width: 825px;
+    }
+    &__item {
+        color: $title;
+        @extend %title-font;
+        line-height: 23px;
+        margin-bottom: 33px;
+    }
+    &__item-content {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        border-bottom: 2px solid #fff;
+        border-radius: 4px;
+    }
+    &__line {
+        height: 2px;
+        border-radius: 4px;
+        background-color: $title;
+        margin-top: -2px;
+    }
+}
+
+.partners {
+    padding: 16px 0 60px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); //5 одинаковый частей
+    }
+    &__item {
+        margin: 0 auto;
+    }
+}
+
+.map {
+    margin-top: -53px;
+    margin-bottom: 50px;
+}
+
+.contact {
+    padding-bottom: 100px;
+    &__title {
+        color: $title;
+        @extend %title-font;
+        font-size: 36px;
+        line-height: 60px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 200px;
+            background-color: #6D7278;
+
+        }
+    }
+    .contact__social {
+        padding-left: 284px;
+        display: flex;
+        margin-bottom: 20px;
+    }
+    &__social-item + .contact__social-item{
+        padding-left: 40px;
+    }
+    &__text {
+        margin-bottom: 10px;
+    }
+    &__phone {
+        color: $default;
+    }
+    &__city {
+        margin-bottom: 16px;
+    }
+    &__box {
+        padding-left: 284px;
+    }
+    // Формы отправки
+    &__form {
+        padding-left: 284px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__form-input {
+        border: 1px solid #DFDFDF;
+        border-radius: 20px;
+        padding: 6px 17px;
+        margin-bottom: 13px;
+        width: 48%;
+        &::placeholder {
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+    &__form-area {
+        width: 100%;
+        border: 1px solid #DFDFDF;
+        border-radius: 24px;
+        padding: 14px 17px;
+        min-height: 125px;
+        resize: none; //убираем хлястик в углу
+        margin-bottom: 20px;
+        &::placeholder {
+            color: #A1A1A1;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+        }
+    }
+    &__form-btn {
+        border: none;
+        background-color: $title;
+        color: #fffff0;
+        font-weight: 600;
+        border-radius: 21px;
+        padding: 6px 60px;
+        cursor: pointer;
+    }
+}
+
+.contact-slider {
+    padding-bottom: 102px;
+    &__link {
+        position: relative;
+        margin-bottom: 20px;
+        &:hover {
+            .contact-slider__title{
+                opacity: 1;
+            }
+        }
+    }
+    &__img {
+        width: 170px;
+        height: 170px;
+        object-fit: cover;
+    }
+    &__title {
+        transition: all .5s;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(#fff, .6);
+        color: $title;
+        @extend %title-font;
+        line-height: 22px;
+        padding: 0 6px;
+        text-align: center;
+        opacity: 0;
     }
 }

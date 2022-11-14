@@ -16,6 +16,14 @@ $(function () {
     }) //Активация слайдера(slick-carousel)
 }); //Появляющиеся сбоку меню on/off
 
+$('.contact-slider').slick({
+    slidesToShow: 10, //изначально показывается 10 штук
+    slidesToScroll: 10, //перемещать сразу по 10
+    dots: true,
+    arrows: false,
+})
+
+
 var mixer = mixitup('.gallery__inner' , {
     load : {
         filter: '.living'
