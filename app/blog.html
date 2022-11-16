@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:ital,wght@0,400;0,600;1,300&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" />
 </head>
 
 <body>
@@ -62,7 +63,7 @@
                                 everyday carry +1 art party
                                 microdosing, put a bird on it brooklyn
                             </p>
-                            <img class="rightside-menu__images" src="images/rightside-png.jpg" alt="images">
+                            <img class="rightside-menu__images" src="images/content/rightside-png.jpg" alt="images">
                         </div>
                     </div>
                 </div>
@@ -89,6 +90,7 @@
             <section class="blog">
                 <div class="container">
                     <div class="blog__inner">
+                        <!-- Первая часть -->
                         <div class="blog__items">
                             <div class="blog__item">
                                 <img class="blog__item-img" src="images/blog/big-1.png" alt="images">
@@ -100,9 +102,11 @@
                                     <a class="blog__item-theme" href="#">
                                         Bedroom Furniture</a>
                                 </div>
-                                <h3 class="blog__item-title">
-                                    Red selfies edison bulb four dollar toast humblebrag for the furniture
-                                </h3>
+                                <a class="blog__item-link" href="#">
+                                    <h3 class="blog__item-title">
+                                        Red selfies edison bulb four dollar toast humblebrag for the furniture
+                                    </h3>
+                                </a>
                                 <p class="blog__item-text">Everyday carry actually neutra authentic kogi shabby chic
                                     migas small batch craft beer. Literally williamsburg tote bag
                                     farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug
@@ -123,7 +127,7 @@
                             <div class="blog__item article-popup">
                                 <div class="article-popup__box">
                                     <img class="blog__item-img" src="images/blog/big-2.jpg" alt="images">
-                                    <a class="blog__item-popup" href="https://youtu.be/Xh4xziFdip4">
+                                    <a class="blog__item-popup" href="https://youtu.be/Xh4xziFdip4" data-fancybox>
                                         <img class="blog__item-play" src="images/play_button.svg" alt="play button">
                                     </a>
                                 </div>
@@ -135,9 +139,11 @@
                                     <a class="blog__item-theme" href="#">
                                         Design</a>
                                 </div>
-                                <h3 class="blog__item-title">
-                                    Authentic kogi shabby chic
-                                </h3>
+                                <a class="blog__item-link" href="#">
+                                    <h3 class="blog__item-title">
+                                        Authentic kogi shabby chic
+                                    </h3>
+                                </a>
                             </div>
 
                             <!-- Слайдер -->
@@ -157,9 +163,11 @@
                                     <a class="blog__item-theme" href="#">
                                         Table Furniture</a>
                                 </div>
-                                <h3 class="blog__item-title">
-                                    Semiotics fixie four dollar toast, next level woke
-                                </h3>
+                                <a class="blog__item-link" href="#">
+                                    <h3 class="blog__item-title">
+                                        Semiotics fixie four dollar toast, next level woke
+                                    </h3>
+                                </a>
                                 <p class="blog__item-text">Everyday carry actually neutra authentic kogi shabby chic
                                     migas small batch craft beer. Literally williamsburg tote bag
                                     farm-to-table mustache ugh deep v irony. Af man bun copper mug iPhone enamel pin pug
@@ -170,7 +178,7 @@
 
                             <!-- Пагинация -->
                             <div class="pagination">
-                                <a class="pagination__arrow" href="#">
+                                <a class="pagination__arrow pagination__arrow--disabled" href="#">
                                     <img class="pagination__arrow-icon" src="images/arrow-left.svg" alt="arrow icon">
                                 </a>
                                 <ul class="pagination__list">
@@ -400,6 +408,7 @@
 
 
     <script src="js/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 </body>
 
 </html>
