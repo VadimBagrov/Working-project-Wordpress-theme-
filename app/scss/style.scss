@@ -1240,5 +1240,38 @@
         border-radius: 21px;
         padding: 6px 60px;
         cursor: pointer;
+        // margin-top: 20px;
     }
+
+    &__form-labelinput {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        /* 4 строки чтобы скрыть checkboxs */
+        padding-left: 20px;
+    }
+        .check-style {
+            /* стилизуем кнопку */
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border: 1px solid #979797;
+            margin-top: 6px;
+        }
+        .check-box:checked+.check-style {
+            background-image: url(../images/check/on.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #000;
+        }
+        .check-box:disabled+.check-style {
+            border-color: #ccc;
+        }
+}
+
+.text-rem {
+    padding-left: 25px;
 }
