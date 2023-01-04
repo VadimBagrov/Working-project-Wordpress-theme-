@@ -4,10 +4,15 @@
 ---
 ### Technologies used :
 
-- HTML , 
--SCSS , 
--JS , 
--Gulp build , 
--BEM modules, 
+- HTML 
+ 
+-SCSS 
+
+-JS  
+
+-Gulp build
+
+-BEM modules
+
 -A lot of galleries
 
