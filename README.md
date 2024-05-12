@@ -11,13 +11,11 @@
 
 - PHP. 
  
-- SCSS. 
+- SCSS (+Bem modules). 
 
 - JS.  
 
 - Gulp build.
 
-- BEM modules.
 
-- A lot of galleries.
 
