@@ -15,23 +15,23 @@
 
       <div class="footer__two">
         <a href="#" class="footer__brand">
-          <img class="footer__img-brand footer__toyota" src="<?php bloginfo('template__url'); ?>/assets/images/dist/toyota.svg" alt="toyota">
+          <img class="footer__img-brand footer__toyota" src="<?php echo B__IMG ?>/assets/images/dist/toyota.svg" alt="toyota">
           <p class="footer__text-brand hover-text">Toyota</p>
         </a>
         <a href="#" class="footer__brand">
-          <img class="footer__img-brand footer__lexus" src="<?php bloginfo('template__url'); ?>/assets/images/dist/lexus.svg" alt="lexus">
+          <img class="footer__img-brand footer__lexus" src="<?php echo B__IMG ?>/assets/images/dist/lexus.svg" alt="lexus">
           <p class="footer__text-brand hover-text">Lexus</p>
         </a>
         <a href="#" class="footer__brand">
-          <img class="footer__img-brand footer__nissan" src="<?php bloginfo('template__url'); ?>/assets/images/dist/nissan.svg" alt="nissan">
+          <img class="footer__img-brand footer__nissan" src="<?php echo B__IMG ?>/assets/images/dist/nissan.svg" alt="nissan">
           <p class="footer__text-brand hover-text">Nissan</p>
         </a>
         <a href="#" class="footer__brand">
-          <img class="footer__img-brand footer__hyundai" src="<?php bloginfo('template__url'); ?>/assets/images/dist/hyundai.svg" alt="hyundai">
+          <img class="footer__img-brand footer__hyundai" src="<?php echo B__IMG ?>/assets/images/dist/hyundai.svg" alt="hyundai">
           <p class="footer__text-brand hover-text">Hyundai</p>
         </a>
         <a href="#" class="footer__brand">
-          <img class="footer__img-brand footer__kia" src="<?php bloginfo('template__url'); ?>/assets/images/dist/kia.svg" alt="kia">
+          <img class="footer__img-brand footer__kia" src="<?php echo B__IMG ?>/assets/images/dist/kia.svg" alt="kia">
           <p class="footer__text-brand hover-text">Kia</p>
         </a>
       </div>

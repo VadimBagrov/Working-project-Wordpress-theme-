@@ -14,7 +14,7 @@
   <header class="header container">
     <div class="header__flex">
       <div class="header__left">
-        <a href="#" class="header__link">
+        <a href="home" class="header__link">
           <h2 class="header__left-logo"><span class="colortext">MOTORIST</span>DVS</h2>
         </a>
         <h3 class="header__left-text">Сертифицированый сервис</h3>
@@ -47,78 +47,78 @@
             <p class="usl">Наши услуги </p>
           </a>
           <div class="header__popups">
-            <a href="kap__remont.html" class="header__popup ">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/dvs1.svg" alt="dvig">
+            <a href="kap__remont" class="header__popup ">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/dvs1.svg" alt="dvig">
               <p class="header__popup-text hover-text">Капитальный ремонт двигателей</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт дизельного двигателя</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/motor_lh2wtmmwqq25.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/motor_lh2wtmmwqq25.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт ГБЦ двигателя</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/check_engine_mzlrq92bc0t6.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/check_engine_mzlrq92bc0t6.svg" alt="dvig">
               <p class="header__popup-text hover-text">Диагностика двигателя</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/motor_69xol7zxvoaa.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/motor_69xol7zxvoaa.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт ТНВД</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/engine_msmxies68w65.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/engine_msmxies68w65.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт блока цилиндров</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/turbine_hppipci8dsa0.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/turbine_hppipci8dsa0.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт турбин</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/repair_rf60k0o8in1z.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/repair_rf60k0o8in1z.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт форсунок</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/timing_belt_muyk5mjqwvrs.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/timing_belt_muyk5mjqwvrs.svg" alt="dvig">
               <p class="header__popup-text hover-text">Замена цепи/ремня ГРМ</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/maintenance_k6wvqk9b5eou 1.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/maintenance_k6wvqk9b5eou 1.svg" alt="dvig">
               <p class="header__popup-text hover-text">Регулировка клапанов</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/maintenance_lu3mnj7ywcng.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/maintenance_lu3mnj7ywcng.svg" alt="dvig">
               <p class="header__popup-text hover-text">Техническое обслуживание авто</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/cooling_7i63waglehvc.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/cooling_7i63waglehvc.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт системы охлаждения</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/manual_transmission_yv8ymawhawmw.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/manual_transmission_yv8ymawhawmw.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт МКПП</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/circulation_1f2cbymjqkxf.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/circulation_1f2cbymjqkxf.svg" alt="dvig">
               <p class="header__popup-text hover-text">Промывка систем автомобиля</p>
             </a>
 
             <a href="#" class="header__popup">
-              <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/chip_208ilogv4xrr.svg" alt="dvig">
+              <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/chip_208ilogv4xrr.svg" alt="dvig">
               <p class="header__popup-text hover-text">Чип-тюнинг</p>
             </a>
           </div>
@@ -222,31 +222,31 @@
     </section>
     <div class="header__pop header__pop--none">
       <a href="#" class="header__popup ">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/service.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/service.svg" alt="dvig">
         <p class="header__popup-text hover-text">Наши услуги</p>
       </a>
 
       <a href="#" class="header__popup">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
         <p class="header__popup-text hover-text">Купить двигатель</p>
       </a>
 
       <a href="#" class="header__popup">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/promo.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/promo.svg" alt="dvig">
         <p class="header__popup-text hover-text">Спецпредложения</p>
       </a>
       <a href="#" class="header__popup">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/contact.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/contact.svg" alt="dvig">
         <p class="header__popup-text hover-text">Контакты</p>
       </a>
 
       <a href="#" class="header__popup">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/statia.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/statia.svg" alt="dvig">
         <p class="header__popup-text hover-text">Статьи</p>
       </a>
 
       <a href="#" class="header__popup">
-        <img class="header__popup-img" src="<?php bloginfo('template__url'); ?>/assets/images/src/about.svg" alt="dvig">
+        <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/about.svg" alt="dvig">
         <p class="header__popup-text hover-text">О нас</p>
       </a>
     </div>
