@@ -23,16 +23,16 @@
         <div class="header__center">
           <div class="block">
             <p class="header__addres">
-              г. Москва, шоссе Энтузиастов, 31с40
+            <?php the_field('Adress') ?>
             </p>
             <div class="header__time">
-              <p class="header__time-hour">8:00 - 20:00</p>
+              <p class="header__time-hour"><?php the_field('time-pn-pt', 6) ?></p>
               <p class="header__time-day">Ежедневно</p>
             </div>
           </div>
           <div class="header__phone">
-            <p class="header__phone-one">+7 (495) 701-81-41</p>
-            <p class="header__phone-two">+7 (916) 755-81-41</p>
+            <a class="header__phone-one hover-text" href="tel:<?php the_field('phone-1-cifr', 6) ?>"><?php the_field('phone-1', 6) ?></a>
+            <a class="header__phone-two hover-text" href="tel:<?php the_field('phone-2-cifr', 6) ?>"><?php the_field('phone-2', 6) ?></a>
           </div>
         </div>
         <div class="header__button">
@@ -162,10 +162,10 @@
             <h2 class="header-mb__left-logo"><span class="colortext">MOTORIST</span>DVS</h2>
           </a>
           <p class="header-mb__addres">
-            г. Москва, шоссе Энтузиастов, 31с40
+          <?php the_field('Adress', 6) ?>
           </p>
           <div class="header-mb__time">
-            <p class="header-mb__time-hour">8:00 - 20:00</p>
+            <p class="header-mb__time-hour"><?php the_field('time-pn-pt', 6) ?></p>
             <p class="header-mb__time-day">Ежедневно</p>
           </div>
         </div>

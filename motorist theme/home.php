@@ -32,11 +32,11 @@ Template Name: home
       <img class="prev " src="<?php echo B__IMG ?>/assets/images/dist/left__arr.png" alt="arrow">
       <div class="slider responsive">
 
-      <?php global $post; $myposts = get_posts([ 'numberposts' => -1,]);
+      <?php global $post; $myposts = get_posts([ 'numberposts' => -1, 'tag' => 'бренды',]);
         if( $myposts ){
         foreach( $myposts as $post ){
           setup_postdata( $post ); ?>
-            <a href="#" class="slider__a">
+            <a href="<?php the_permalink(); ?>" class="slider__a">
               <?php the_post_thumbnail('full', array('class' => 'brand__img')); ?>
               <p class="slider__name brand__name"><?php the_title() ?></p>
             </a>
@@ -51,187 +51,93 @@ Template Name: home
       <h5 class="catalog__title">Каталог оказываемых услуг</h5>
       <div class="catalog__blocks ">
 
-        <a class="catalog__a" href="kap__remont">
+      <?php global $post; $myposts = get_posts([ 'numberposts' => 4, 'tag' => 'двигатель , обслуживание , трансмиссия', 'include'   => '222,277,224,226', ]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+        <a class="catalog__a" href="<?php the_permalink(); ?>">
           <div class="catalog__block">
-            <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/kap_rem_dvs.avif" alt="Капитальный ремонт двигателя">
+          <?php the_post_thumbnail('full', array('class' => 'catalog__img')); ?>
             <div class="catalog__bottom">
-              <h2 class="catalog__text">Капитальный ремонт двигателей</h2>
+              <h2 class="catalog__text"><?php the_title() ?></h2>
               <button class="catalog__btn">Подробнее</button>
             </div>
           </div>
         </a>
-
-        <a class="catalog__a" href="">
-          <div class="catalog__block">
-            <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_diz_dvs.avif" alt="Ремонт дизельного двигателя">
-            <div class="catalog__bottom">
-              <h2 class="catalog__text">Ремонт дизельного двигателя</h2>
-              <button class="catalog__btn">Подробнее</button>
-            </div>
-          </div>
-        </a>
-
-        <a class="catalog__a" href="">
-          <div class="catalog__block">
-            <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_gbc_1.avif" alt="Ремонт ГБЦ двигателя">
-            <div class="catalog__bottom">
-              <h2 class="catalog__text">Ремонт ГБЦ двигателя</h2>
-              <button class="catalog__btn">Подробнее</button>
-            </div>
-          </div>
-        </a>
-
-        <a class="catalog__a" href="">
-          <div class="catalog__block">
-            <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/diag_dvs.avif" alt="Диагностика двигателя">
-            <div class="catalog__bottom">
-              <h2 class="catalog__text">Диагностика двигателя</h2>
-              <button class="catalog__btn">Подробнее</button>
-            </div>
-          </div>
-        </a>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
         <div class="catalog__mob">
 
-          <a class="catalog__a" href="">
-            <div class="catalog__block">
-              <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_blk-cil.avif" alt="Ремонт блока цилиндров">
-              <div class="catalog__bottom">
-                <h2 class="catalog__text">Ремонт блока цилиндров</h2>
-                <button class="catalog__btn">Подробнее</button>
-              </div>
+        <?php global $post; $myposts = get_posts([ 'numberposts' => 4, 'tag' => 'двигатель , обслуживание , трансмиссия', 'include'   => '228,230,232,234', ]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+        <a class="catalog__a" href="<?php the_permalink(); ?>">
+          <div class="catalog__block">
+          <?php the_post_thumbnail('full', array('class' => 'catalog__img')); ?>
+            <div class="catalog__bottom">
+              <h2 class="catalog__text"><?php the_title() ?></h2>
+              <button class="catalog__btn">Подробнее</button>
             </div>
-          </a>
+          </div>
+        </a>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
 
-          <a class="catalog__a" href="">
-            <div class="catalog__block">
-              <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_tur_2.avif" alt="Ремонт турбин">
-              <div class="catalog__bottom">
-                <h2 class="catalog__text">Ремонт турбин</h2>
-                <button class="catalog__btn">Подробнее</button>
-              </div>
-            </div>
-          </a>
-
-          <a class="catalog__a" href="">
-            <div class="catalog__block">
-              <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_fors.avif" alt="Ремонт форсунок">
-              <div class="catalog__bottom">
-                <h2 class="catalog__text">Ремонт форсунок</h2>
-                <button class="catalog__btn">Подробнее</button>
-              </div>
-            </div>
-          </a>
-
-          <a class="catalog__a" href="">
-            <div class="catalog__block">
-              <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/zam_cep.avif" alt="Замена цепи/ремня ГРМ">
-              <div class="catalog__bottom">
-                <h2 class="catalog__text">Замена цепи/ремня ГРМ</h2>
-                <button class="catalog__btn">Подробнее</button>
-              </div>
-            </div>
-          </a>
           <div class="catalog__center">
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/reg_klap.avif" alt="Регулировка клапанов">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Регулировка клапанов</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
-
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/tex_obs.avif" alt="Техническое обслуживание авто">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Техническое обслуживание авто</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/remont_tnvd.avif" alt="Ремонт ТНВД">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Ремонт ТНВД</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_sis.avif" alt="Ремонт системы охлаждения">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Ремонт системы охлаждения</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
+          <?php global $post; $myposts = get_posts([ 'numberposts' => 4, 'tag' => 'двигатель , обслуживание , трансмиссия','include'   => '236,238,240,242', ]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+        <a class="catalog__a" href="<?php the_permalink(); ?>">
+          <div class="catalog__block">
+          <?php the_post_thumbnail('full', array('class' => 'catalog__img')); ?>
+            <div class="catalog__bottom">
+              <h2 class="catalog__text"><?php the_title() ?></h2>
+              <button class="catalog__btn">Подробнее</button>
+            </div>
+          </div>
+        </a>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
           </div>
 
           <div class="catalog__bottom-bl">
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/rem_kpp.avif" alt="Ремонт МКПП">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Ремонт МКПП</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
-
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/prom_sis.avif" alt="Промывка систем автомобиля">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Промывка систем автомобиля</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
-
-            <a class="catalog__a" href="">
-              <div class="catalog__block">
-                <img class="catalog__img" src="<?php echo B__IMG ?>/assets/images/dist/chip_tun.avif" alt="Чип-тюнинг">
-                <div class="catalog__bottom">
-                  <h2 class="catalog__text">Чип-тюнинг</h2>
-                  <button class="catalog__btn">Подробнее</button>
-                </div>
-              </div>
-            </a>
+          <?php global $post; $myposts = get_posts([ 
+            'numberposts' => -1, 
+            'tag'         => 'двигатель , обслуживание , трансмиссия', 
+            'orderby'     => 'modified',
+	          'order'       => 'DESC',
+            'exclude'     => '236,238,240,242,228,230,232,234,222,277,224,226']);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+        <a class="catalog__a" href="<?php the_permalink(); ?>">
+          <div class="catalog__block">
+          <?php the_post_thumbnail('full', array('class' => 'catalog__img')); ?>
+            <div class="catalog__bottom">
+              <h2 class="catalog__text"><?php the_title() ?></h2>
+              <button class="catalog__btn">Подробнее</button>
+            </div>
+          </div>
+        </a>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
           </div>
         </div>
 
         <button class="catalog__more" id='catalog__more' type="submit">
           <p class="caralog__more-text bold">Показать все</p>
-        </button>
+        </button> 
 
       </div>
     </section>
 
     <section class="seo container">
+
       <div class="seo__block">
         <h2 class="seo__title">
-          Качественный ремонт двигателей <span class="colortext">в Москве</span>
+          <?php the_field('seo-title'); ?>
         </h2>
-        <p class="seo__text">
-          Специализированный сервис Toyota Motors Club обладает огромным опытом по ремонту двигателей и комплексному
-          обслуживанию автомобилей от ведущих производителей: Тойота, Лексус, Kia, Hyundai, Nissan .Мы предлагаем полный
-          цикл работ по ремонту двигателей,сочетаем в своей работе гарантии качества, надежность, высокие стандарты и
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          Автотехцентр MotoristDVS в Москве предлагает услуги обслуживание и ремонт...
-          ---------------
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          ---------------
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-        </p>
+        <h6 class="seo__text">
+        <?php the_field('seo-text'); ?>
+        </h6>
       </div>
       <button class="seo__bolee">
         <p class="seo__bolee-text hover-text">Развернуть ↓
@@ -263,28 +169,27 @@ Template Name: home
       <div class="advantages__blocks">
         <div class="advantages__block">
           <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/heart.svg" alt="heart">
-          <p class="advantages__top">Любимое дело</p>
-          <p class="advantages__bottom">Стаж мастеров<br />минимум от 10 лет.<br />Они выбирали<br />любимую проффесию.
+          <p class="advantages__top"><?php the_field('preim-title1') ?></p>
+          <p class="advantages__bottom"><?php the_field('preim-text1') ?></p>
           </p>
         </div>
 
         <div class="advantages__block advantages__block2">
           <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/security.svg" alt="security">
-          <p class="advantages__top">Надежность</p>
-          <p class="advantages__bottom">90% запчастей<br />ориигнальные и всегда есть<br />в наличии на складе.</p>
+          <p class="advantages__top"><?php the_field('preim-title2') ?></p></p>
+          <p class="advantages__bottom"><?php the_field('preim-text2') ?>
         </div>
 
         <div class="advantages__block">
           <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/approve.svg" alt="approve">
-          <p class="advantages__top">Опыт с 99 года</p>
-          <p class="advantages__bottom">50% механиков<br />Работают со дня<br /> основания техцентра.</p>
+          <p class="advantages__top"><?php the_field('preim-title3') ?></p></p>
+          <p class="advantages__bottom"><?php the_field('preim-text3') ?>
         </div>
 
         <div class="advantages__block">
           <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/location.svg" alt="location">
-          <p class="advantages__top">Удобное<br />расположение</p>
-          <p class="advantages__bottom">В 400 метрах<br />
-            от метро Стахановская.</p>
+          <p class="advantages__top"><?php the_field('preim-title4') ?></p>
+          <p class="advantages__bottom"><?php the_field('preim-text4') ?>
         </div>
 
       </div>
@@ -326,301 +231,91 @@ Template Name: home
               <p class="service__price">Стоимость</p>
             </div>
 
-            <div class="service__general">
+        <div class="service__general">
 
-              <a href="kap__remont">
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Капитальный ремонт двигателя</h2>
-                    <p class="service__usluga-price">Договорная</p>
+        <?php global $post; $myposts = get_posts([ 
+        'numberposts' => -1, 
+        'tag'         => 'двигатель , обслуживание , трансмиссия', 
+        'orderby'     => 'modified',]);
+          if( $myposts ){
+          foreach( $myposts as $post ){
+            setup_postdata( $post ); ?>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="service__usluga">
+                    <div class="service__usluga-div">
+                      <h2 class="service__usluga-title"><?php the_title() ?></h2>
+                      <h6 class="service__usluga-price"><?php the_content() ?></h6>
+                    </div>
                   </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Диагностика двигателя</h2>
-                    <p class="service__usluga-price">от 1500 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт дизельного двигателя</h2>
-                    <p class="service__usluga-price">Договорная</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт турбин</h2>
-                    <p class="service__usluga-price">от 10000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт системы охлаждения</h2>
-                    <p class="service__usluga-price">от 6500 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Промывка систем автомобиля</h2>
-                    <p class="service__usluga-price">от 3500 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Замена цепи/ремня ГРМ</h2>
-                    <p class="service__usluga-price">от 7000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт МКПП</h2>
-                    <p class="service__usluga-price">от 8000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Регулировка клапанов</h2>
-                    <p class="service__usluga-price">от 8000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Чип-тюнинг</h2>
-                    <p class="service__usluga-price">от 5000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт ТНВД</h2>
-                    <p class="service__usluga-price">от 5000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт блока цилиндров</h2>
-                    <p class="service__usluga-price">от 11000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт ГБЦ двигателя</h2>
-                    <p class="service__usluga-price">от 9000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт форсунок</h2>
-                    <p class="service__usluga-price">от 3000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-
+                  <div class="service__usluga-line"></div>
+                </a>
+        <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
             </div>
 
             <div class="service__dvigatel service__dvigatel--none ">
 
-              <a href="kap__remont">
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Капитальный ремонт двигателя</h2>
-                    <p class="service__usluga-price">Договорная</p>
+            <?php global $post; $myposts = get_posts([ 
+        'numberposts' => -1, 
+        'tag'         => 'двигатель', 
+        'orderby'     => 'modified',]);
+          if( $myposts ){
+          foreach( $myposts as $post ){
+            setup_postdata( $post ); ?>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="service__usluga">
+                    <div class="service__usluga-div">
+                      <h2 class="service__usluga-title"><?php the_title() ?></h2>
+                      <h6 class="service__usluga-price"><?php the_content() ?></h6>
+                    </div>
                   </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт дизельного двигателя</h2>
-                    <p class="service__usluga-price">Договорная</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт турбин</h2>
-                    <p class="service__usluga-price">от 10000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Замена цепи/ремня ГРМ</h2>
-                    <p class="service__usluga-price">от 7000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Регулировка клапанов</h2>
-                    <p class="service__usluga-price">от 8000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт ТНВД</h2>
-                    <p class="service__usluga-price">от 5000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт блока цилиндров</h2>
-                    <p class="service__usluga-price">от 11000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт ГБЦ двигателя</h2>
-                    <p class="service__usluga-price">от 9000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт форсунок</h2>
-                    <p class="service__usluga-price">от 3000 р.</p>
-                  </div>
-                </div>
-              </a>
-
-
+                  <div class="service__usluga-line"></div>
+                </a>
+        <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
             </div>
 
             <div class="service__transmission service__transmission--none ">
 
-              <a href="#">
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт МКПП</h2>
-                    <p class="service__usluga-price">от 8000 р.</p>
+        <?php global $post; $myposts = get_posts([ 
+        'numberposts' => -1, 
+        'tag'         => 'трансмиссия', 
+        'orderby'     => 'modified',]);
+          if( $myposts ){
+          foreach( $myposts as $post ){
+            setup_postdata( $post ); ?>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="service__usluga">
+                    <div class="service__usluga-div">
+                      <h2 class="service__usluga-title"><?php the_title() ?></h2>
+                      <h6 class="service__usluga-price"><?php the_content() ?></h6>
+                    </div>
                   </div>
-                </div>
-                <div class="service__usluga-line"></div>
-              </a>
+                  <div class="service__usluga-line"></div>
+                </a>
+        <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
 
 
             </div>
 
             <div class="service__obslug service__obslug--none">
 
-              <a href="#">
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Диагностика двигателя</h2>
-                    <p class="service__usluga-price">от 1500 р.</p>
+            <?php global $post; $myposts = get_posts([ 
+        'numberposts' => -1, 
+        'tag'         => 'обслуживание', 
+        'orderby'     => 'modified',]);
+          if( $myposts ){
+          foreach( $myposts as $post ){
+            setup_postdata( $post ); ?>
+                <a href="<?php the_permalink(); ?>">
+                  <div class="service__usluga">
+                    <div class="service__usluga-div">
+                      <h2 class="service__usluga-title"><?php the_title() ?></h2>
+                      <h6 class="service__usluga-price"><?php the_content() ?></h6>
+                    </div>
                   </div>
-                </div>
-              </a>
+                  <div class="service__usluga-line"></div>
+                </a>
+        <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
 
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Ремонт системы охлаждения</h2>
-                    <p class="service__usluga-price">от 6500 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Промывка систем автомобиля</h2>
-                    <p class="service__usluga-price">от 3500 р.</p>
-                  </div>
-                </div>
-              </a>
-
-              <a href="#">
-                <div class="service__usluga-line"></div>
-                <div class="service__usluga">
-                  <div class="service__usluga-div">
-                    <h2 class="service__usluga-title">Чип-тюнинг</h2>
-                    <p class="service__usluga-price">от 5000 р.</p>
-                  </div>
-                </div>
-                <div class="service__usluga-line"></div>
-              </a>
 
             </div>
           </div>
@@ -656,7 +351,7 @@ Template Name: home
               <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/addres.svg" alt="addres">
               <h6 class="contacts__block-title contacts__addres-t">Адрес</h6>
             </div>
-            <p class="contacts__block-text">г. Москва ул.Шоссе энтузиастов 31с40</p>
+            <p class="contacts__block-text"><?php the_field('Adress') ?></p>
           </div>
           <div class="contacts__bl-bottom">
             <div class="contacts__phone">
@@ -664,7 +359,8 @@ Template Name: home
                 <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/phone.svg" alt="addres">
                 <h6 class="contacts__block-title contacts__phone-t">Телефоны</h6>
               </div>
-              <p class="contacts__block-text hover-text">+7 (495) 701-81-41<br />+7 (916) 755-81-41</p>
+              <a class="contacts__block-text hover-text" href='tel:<?php the_field('phone-1-cifr') ?>'><?php the_field('phone-1') ?></a>
+              <a class="contacts__block-text hover-text" href='tel:<?php the_field('phone-2-cifr') ?>'></br><?php the_field('phone-2') ?></a>
             </div>
 
             <div class="contacts__email">
@@ -672,7 +368,7 @@ Template Name: home
                 <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/email.svg" alt="addres">
                 <h6 class="contacts__block-title contacts__email-t hover-text">Email</h6>
               </div>
-              <p class="contacts__block-tex hover-textt">motoristdvs@info.ru</p>
+              <a class="contacts__block-tex hover-text" href="mailto:<?php the_field('email') ?>"><?php the_field('email') ?></a>
             </div>
           </div>
           <div class="contacts__work">
@@ -683,10 +379,10 @@ Template Name: home
             <p class="contacts__block-text">
             <ul class="contacts__ul">
               <li class="contacts__li">
-                По будням - с 8:00 до 20:00 (без перерыров)
+                По будням - <?php the_field('time-pn-pt') ?> (без перерыров)
               </li>
               <li class="contacts__li">
-                В субботу и воскресенье - с 10:00 до 16:00 (без перерывов)
+                В субботу и воскресенье - <?php the_field('time-sb-vs') ?> (без перерывов)
               </li>
             </ul>
             </p>

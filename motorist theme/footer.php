@@ -4,13 +4,13 @@
         <h3 class="footer__logo"><span class="colortext">MOTORIST</span>DVS</h3>
         <p class="footer__servis">Сертифицированый сервис</p>
         <div class="footer__phone-block">
-          <p class="footer__phone hover-text">+7 (495) 701-81-41<br />+7 (916) 755-81-41</p>
+          <a class="footer__phone hover-text" href="tel:<?php the_field('phone-1-cifr', 6) ?>"><?php the_field('phone-1', 6) ?></a>
+          <a class="footer__phone hover-text" href="tel:<?php the_field('phone-2-cifr', 6) ?>"></br><?php the_field('phone-2', 6) ?></a>
         </div>
-        <p class="footer__email hover-text">motoristdvs@info.ru</p>
-        <p class="footer__addres">г. Москва
-          ул.Шоссе энтузиастов 31с40</p>
-        <p class="footer__grafick">Будни: с 8:00 - 20:00<br />
-          Суббота воскресенье: 10:00 - 20:00</p>
+        <a class="footer__email hover-text" href="mailto:<?php the_field('email', 6) ?>"><?php the_field('email', 6) ?></a>
+        <p class="footer__addres"><?php the_field('Adress', 6) ?></p>
+        <p class="footer__grafick">Будни: с <?php the_field('time-pn-pt', 6) ?><br />
+          Суббота воскресенье: <?php the_field('time-sb-vs', 6) ?></p>
       </div>
 
       <div class="footer__two">
