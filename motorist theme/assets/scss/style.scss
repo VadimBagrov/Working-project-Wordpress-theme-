@@ -1852,6 +1852,10 @@ body {
 }
 
 @media screen and (max-width: 1776px) {
+  .header__block>p {
+    font-size: 18px;
+  }
+
   .main-sec__left {
     padding-top: 50px;
     padding-left: 8.031%;
