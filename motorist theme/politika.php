@@ -1,8 +1,7 @@
 <?php
 /*
-Template Name: home
+Template Name: politika
 */
-
 ?>
 
 <?php get_header(); ?>
@@ -15,9 +14,7 @@ Template Name: home
           <h1 class="main-sec__left-title">
             Профессиональный ремонт<br />ДВС в Москве
           </h1>
-          <a href="#forma">
-          <button href='#forma' class="main-sec__left-btn" type="submit">Записаться в сервис</button>
-          </a>
+          <button class="main-sec__left-btn" type="submit">Записаться в сервис</button>
         </div>
 
         <div class="main-sec__right">
@@ -147,7 +144,7 @@ Template Name: home
       </button>
     </section>
 
-    <section id='forma' class="forma container">
+    <section class="forma container">
       <div class="forma__left">
         <h5 class="forma__text">Есть сомнения в исправности двигателя?</h5>
         <h3 class="forma__title">Получите <span class="colortext">бесплатную</span> консультацию от <span
@@ -335,8 +332,7 @@ Template Name: home
       </div>
       <div class="question__right">
         <form class="question__form" action="#" method="post">
-          <input class="question__number" type="text" placeholder="Номер телефона">
-          <button class="question__send hover-text" type="submit">Оставить заявку</button>
+        <?php echo do_shortcode('[contact-form-7 id="c090df8" title="Остались вопросы?"]') ?>
         </form>
       </div>
     </section>
@@ -378,7 +374,7 @@ Template Name: home
               <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/clock1.svg" alt="addres">
               <h6 class="contacts__block-title contacts__work-t">Режим работы</h6>
             </div>
-            <p class="contacts__block-text mit__all">
+            <p class="contacts__block-text">
             <ul class="contacts__ul">
               <li class="contacts__li">
                 По будням - <?php the_field('time-pn-pt') ?> (без перерыров)
@@ -401,4 +397,5 @@ Template Name: home
 
     </section>
   </main>
+
   <?php get_footer(); ?>

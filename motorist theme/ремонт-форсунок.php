@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: mitsubishi
+Template Name: ремонт-форсунок
 */
 
 ?>
@@ -9,12 +9,44 @@ Template Name: mitsubishi
 
   <main class="main">
     <section class="breadcrumbs container">
-      <a class="breadcrumbs__text" href="home">ГЛАВНАЯ</a>
+      <a class="breadcrumbs__text hover-text" href="home">ГЛАВНАЯ</a>
       <p class="breadcrumbs__text">»</p>
-      <a class="breadcrumbs__text" href="kap-rem-dvs.html">РЕМОНТ ДВИГАТЕЛЯ</a>
+      <a class="breadcrumbs__text hover-text " href="kap-rem-dvs.html">РЕМОНТ ДВИГАТЕЛЯ</a>
     </section>
 
-    <section class="car container">
+    <section class="main-block">
+      <div class="main-block__left">
+        <h1 class="main-block__title">
+          Ремонт двигателя <span class="colortext">в Москве</span>
+        </h1>
+        <div class="main-block__preims">
+          <div class="main-block__preim">
+            <img class="main-block__svg" src="images/dist/security.svg" alt="security">
+            <p class="main-block__text">Гарантия работ</p>
+          </div>
+
+          <div class="main-block__preim">
+            <img class="main-block__svg" src="images/dist/clock.svg" alt="security">
+            <p class="main-block__text">Стаж работы 25 лет</p>
+          </div>
+
+          <div class="main-block__preim">
+            <img class="main-block__svg" src="images/dist/approve.svg" alt="security">
+            <p class="main-block__text">Высококвалифицированные мастера</p>
+          </div>
+
+          <div class="main-block__preim">
+            <img class="main-block__svg" src="images/dist/location.svg" alt="security">
+            <p class="main-block__text">В <span class="colortext">400 метрах</span> от метро Стахановская</p>
+          </div>
+        </div>
+        <button class="main-block__btn">Записаться в сервис</button>
+      </div>
+
+
+    </section>
+
+    <section class="car container car3">
       <div class="car__img">
         <img class="car__photo" src="images/src/outlander.png" alt="mitsubishi">
       </div>
@@ -96,6 +128,63 @@ Template Name: mitsubishi
             <p class="car__text hover-text">Чип-тюнинг</p>
           </a>
         </div>
+      </div>
+    </section>
+
+    <section class="seo container">
+      <div class="seo__block">
+        <h2 class="seo__title">
+          Качественный ремонт двигателей <span class="colortext">в Москве</span>
+        </h2>
+        <p class="seo__text">
+          Специализированный сервис Toyota Motors Club обладает огромным опытом по ремонту двигателей и комплексному
+          обслуживанию автомобилей от ведущих производителей: Тойота, Лексус, Kia, Hyundai, Nissan .Мы предлагаем полный
+          цикл работ по ремонту двигателей,сочетаем в своей работе гарантии качества, надежность, высокие стандарты и
+          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
+          мастеров минимум от 10 лет.
+          Автотехцентр MotoristDVS в Москве предлагает услуги обслуживание и ремонт...
+          ---------------
+          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
+          мастеров минимум от 10 лет.
+          ---------------
+          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
+          мастеров минимум от 10 лет.
+          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
+          мастеров минимум от 10 лет.
+        </p>
+      </div>
+      <button class="seo__bolee">
+        <p class="seo__bolee-text hover-text">Развернуть ↓
+        </p>
+      </button>
+    </section>
+
+    <section class="out container">
+      <h3 class="out__title advantages__title"> Примеры наших работ</h3>
+      <div class="out__imgs">
+        <img class="prev " src="/images/dist/left__arr.png" alt="arrow">
+        <div class="slider2 multiple-items">
+          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+
+          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
+        </div>
+        <img class="next" src="/images/dist/right__arr.png" alt="arrow">
       </div>
     </section>
 
@@ -206,62 +295,6 @@ Template Name: mitsubishi
       </div>
     </section>
 
-    <section class="seo container">
-      <div class="seo__block">
-        <h2 class="seo__title">
-          Качественный ремонт двигателей <span class="colortext">в Москве</span>
-        </h2>
-        <p class="seo__text">
-          Специализированный сервис Toyota Motors Club обладает огромным опытом по ремонту двигателей и комплексному
-          обслуживанию автомобилей от ведущих производителей: Тойота, Лексус, Kia, Hyundai, Nissan .Мы предлагаем полный
-          цикл работ по ремонту двигателей,сочетаем в своей работе гарантии качества, надежность, высокие стандарты и
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          Автотехцентр MotoristDVS в Москве предлагает услуги обслуживание и ремонт...
-          ---------------
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          ---------------
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-          особое отношение к каждому клиенту. 90% наших запчастей оригинальные и всегда есть в наличии на складе,а стаж
-          мастеров минимум от 10 лет.
-        </p>
-      </div>
-      <button class="seo__bolee">
-        <p class="seo__bolee-text hover-text">Развернуть ↓
-        </p>
-      </button>
-    </section>
-
-    <section class="out container">
-      <h3 class="out__title advantages__title"> Примеры наших работ</h3>
-      <div class="out__imgs">
-        <img class="prev " src="/images/dist/left__arr.png" alt="arrow">
-        <div class="slider2 multiple-items">
-          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
-        </div>
-        <img class="next" src="/images/dist/right__arr.png" alt="arrow">
-      </div>
-    </section>
 
     <section class="forma container">
       <div class="forma__left">

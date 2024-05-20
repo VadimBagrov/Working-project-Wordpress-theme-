@@ -23,7 +23,7 @@
         <div class="header__center">
           <div class="block">
             <p class="header__addres">
-            <?php the_field('Adress') ?>
+            <?php the_field('Adress', 6) ?>
             </p>
             <div class="header__time">
               <p class="header__time-hour"><?php the_field('time-pn-pt', 6) ?></p>
@@ -43,81 +43,81 @@
     <section class="header__but">
       <div class="header__button">
         <div class="header__a-block">
-          <a href="#" class="header__block header__usl">
+          <a href="http://localhost:8888/#catalog" class="header__block header__usl">
             <p class="usl">Наши услуги </p>
           </a>
           <div class="header__popups">
-            <a href="kap__remont" class="header__popup ">
+            <a href="/капитальный-ремонт-двигателя/" class="header__popup ">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/dvs1.svg" alt="dvig">
               <p class="header__popup-text hover-text">Капитальный ремонт двигателей</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-дизельного-двигателя/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт дизельного двигателя</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-гбц-двигателя/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/motor_lh2wtmmwqq25.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт ГБЦ двигателя</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/диагностика-двигателя/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/check_engine_mzlrq92bc0t6.svg" alt="dvig">
               <p class="header__popup-text hover-text">Диагностика двигателя</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-тнвд/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/motor_69xol7zxvoaa.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт ТНВД</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-блока-цилиндров/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/engine_msmxies68w65.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт блока цилиндров</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-турбин/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/turbine_hppipci8dsa0.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт турбин</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-форсунок/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/repair_rf60k0o8in1z.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт форсунок</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/замена-цепи-ремня-грм/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/timing_belt_muyk5mjqwvrs.svg" alt="dvig">
               <p class="header__popup-text hover-text">Замена цепи/ремня ГРМ</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/регулировка-клапанов/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/maintenance_k6wvqk9b5eou 1.svg" alt="dvig">
               <p class="header__popup-text hover-text">Регулировка клапанов</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/техническое-обслуживание-авто/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/maintenance_lu3mnj7ywcng.svg" alt="dvig">
               <p class="header__popup-text hover-text">Техническое обслуживание авто</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-системы-охлаждения/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/cooling_7i63waglehvc.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт системы охлаждения</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/ремонт-мкпп/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/manual_transmission_yv8ymawhawmw.svg" alt="dvig">
               <p class="header__popup-text hover-text">Ремонт МКПП</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/промывка-систем-автомобиля/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/circulation_1f2cbymjqkxf.svg" alt="dvig">
               <p class="header__popup-text hover-text">Промывка систем автомобиля</p>
             </a>
 
-            <a href="#" class="header__popup">
+            <a href="/чип-тюнинг/" class="header__popup">
               <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/chip_208ilogv4xrr.svg" alt="dvig">
               <p class="header__popup-text hover-text">Чип-тюнинг</p>
             </a>
@@ -189,7 +189,7 @@
 
       </div>
       <div class="header-mb__a-block">
-        <a href="#" class="header-mb__block header-mb__usl">
+        <a href="http://localhost:8888/#catalog" class="header-mb__block header-mb__usl">
           <p class="usl">Наши услуги </p>
         </a>
       </div>
@@ -221,7 +221,7 @@
       </div>
     </section>
     <div class="header__pop header__pop--none">
-      <a href="#" class="header__popup ">
+      <a href="http://localhost:8888/#catalog" class="header__popup ">
         <img class="header__popup-img" src="<?php echo B__IMG ?>/assets/images/src/service.svg" alt="dvig">
         <p class="header__popup-text hover-text">Наши услуги</p>
       </a>

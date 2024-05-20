@@ -68,27 +68,27 @@
       <div class="footer__five">
         <ul class="footer__ul-five">
           <li class="footer__li-five hover-text">
-            <a class="footer__a-five hover-text" href="#">Блог</a>
+            <a class="footer__a-five hover-text" href="/blog">Блог</a>
           </li>
           <li class="footer__li-five hover-text">
-            <a class="footer__a-five hover-text" href="#">О нас</a>
+            <a class="footer__a-five hover-text" href="/onas">О нас</a>
           </li>
           <li class="footer__li-five hover-text">
-            <a class="footer__a-five hover-text" href="#">Контакты</a>
+            <a class="footer__a-five hover-text" href="#contact">Контакты</a>
           </li>
           <li class="footer__li-five hover-text">
-            <a class="footer__a-five hover-text" href="#">Наши услуги</a>
+            <a class="footer__a-five hover-text" href="#catalog">Наши услуги</a>
           </li>
           <li class="footer__li-five">
-            <a class="footer__a-five hover-text" href="#">Спецпредложения</a>
+            <a class="footer__a-five hover-text" href="/spec">Спецпредложения</a>
           </li>
         </ul>
       </div>
     </div>
   </footer>
-
-  <?php wp_footer() ?>
   <script src="js/main.js"></script>
+  <script src="js/secondary.js"></script>
+  <?php wp_footer() ?>
 </body>
 
 </html>

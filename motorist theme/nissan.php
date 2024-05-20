@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: mitsubishi
+Template Name: nissan
 */
 
 ?>
