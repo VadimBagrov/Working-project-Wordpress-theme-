@@ -52,7 +52,8 @@
 .btnHover,
 .catalog__btn:hover,
 .main-sec__left-btn:hover,
-.header__btn:hover {
+.header__btn:hover,
+.main-block__btn:hover {
   border-radius: 4px;
   background: #fff;
   border: 1px solid #ff0004;
@@ -171,6 +172,10 @@ a {
   margin: 0 auto
 }
 
+html {
+  scroll-behavior: smooth
+}
+
 body {
   font-family: Geometria
 }
@@ -182,10 +187,12 @@ body {
 
 .main-block {
   margin-bottom: 50px;
-  background-image: url(../images/src/background__fone.png);
-  background-size: contain;
   background-repeat: no-repeat;
   display: flex
+}
+
+.main-block__kap-rem {
+  background-image: url(../images/src/background__fone.png);
 }
 
 .main-block__title {
@@ -237,11 +244,30 @@ body {
   background-color: #eb2227;
   color: #fff;
   font-weight: 500;
-  font-size: 24px
+  font-size: 24px;
+  cursor: pointer
+}
+
+.main-block__btn:hover {
+  border-radius: 4px;
+  background: #fff;
+  border: 1px solid rgb(255, 0, 4);
+  color: rgb(255, 0, 4);
+  font-size: 24px;
+  line-height: 19px;
+  cursor: pointer;
 }
 
 .main-block__left {
   margin-left: 7.4rem
+}
+
+.main-block__btn {
+  cursor: pointer
+}
+
+.main-block__form-cr {
+  cursor: pointer
 }
 
 .car3 {

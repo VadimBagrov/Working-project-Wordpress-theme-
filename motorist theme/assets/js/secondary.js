@@ -70,6 +70,7 @@ $(".multiple-items").slick({
 });
 
 $(".multiple-items2").slick({
+  infinite: true,
   speed: 1000,
   autoplay: true,
   autoplaySpeed: 1500,
@@ -118,9 +119,6 @@ const button = document.querySelector('.catalog__more');
 const menu = document.querySelector('.catalog__bottom-bl');
 const cat = document.querySelector('.catalog');
 
-
-const height = () => cat.classList.toggle('catalog--active');
-
 // Блок с выбором Двигатель
 document.querySelector('.service__dvs').addEventListener('click', () => {
   document.querySelector('.service__general').classList.add('service__general--none');
@@ -149,6 +147,13 @@ document.querySelector('.service__obsl').addEventListener('click', () => {
   document.querySelector('.service__obslug').classList.remove('service__obslug--none');
 })
 
+const height = () => cat.classList.toggle('catalog--active');
+//Раскрытие каталога услуг
+document.querySelector('.catalog__more').addEventListener('click', () => {
+  document.querySelector('.catalog__bottom-bl').classList.toggle('catalog__bottom-bl--active');
+  document.querySelector('.catalog__more').classList.add('catalog__more--none');
+  document.querySelector('.catalog__mob').classList.add('catalog__bottom-bl--active');
+})
 //Раскрытие слайдера
 document.querySelector('.mit__all').addEventListener('click', () => {
   document.querySelector('.mit').classList.add('mit--none');
