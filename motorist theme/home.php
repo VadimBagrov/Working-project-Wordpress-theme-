@@ -15,8 +15,8 @@ Template Name: home
           <h1 class="main-sec__left-title">
             Профессиональный ремонт<br />ДВС в Москве
           </h1>
-          <a href="#forma">
-          <button href='#forma' class="main-sec__left-btn" type="submit">Записаться в сервис</button>
+          <a class='popup-sva'>
+          <button class="main-sec__left-btn" type="submit">Записаться в сервис</button>
           </a>
         </div>
 
@@ -26,6 +26,26 @@ Template Name: home
         </div>
       </div>
     </section>
+
+    <div class="forma__main forma__main--none">
+        <div class="forma__close">
+          <img class='forma__cl-png' src="http://localhost:8888/wp-content/uploads/2024/05/close-red.png" alt="close">
+        </div>
+        <div class="forma__div">
+          <p class="forma__text-m">
+            Оставьте ваши контакты
+          </p>
+        </div>
+        <form class="" action="#" method="post">
+          <div class="forma__text-top">
+          </div>
+          <div class="forma__text-bottom">
+          </div>
+          <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
+        </form>
+        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+          обработку ваших <a href="#">Персональных данных</a></p>
+      </div>
 
     <section class="sliderr">
       <h4 class="brand__title">Бренды</h4>
@@ -335,7 +355,7 @@ Template Name: home
       </div>
       <div class="question__right">
         <form class="question__form" action="#" method="post">
-          <input class="question__number" type="text" placeholder="Номер телефона">
+          <input class="question__number mit__all" type="text" placeholder="Номер телефона">
           <button class="question__send hover-text" type="submit">Оставить заявку</button>
         </form>
       </div>
@@ -378,7 +398,7 @@ Template Name: home
               <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/clock1.svg" alt="addres">
               <h6 class="contacts__block-title contacts__work-t">Режим работы</h6>
             </div>
-            <p class="contacts__block-text mit__all">
+            <p class="contacts__block-text">
             <ul class="contacts__ul">
               <li class="contacts__li">
                 По будням - <?php the_field('time-pn-pt') ?> (без перерыров)

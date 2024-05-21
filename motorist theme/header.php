@@ -36,7 +36,7 @@
           </div>
         </div>
         <div class="header__button">
-          <button class="header__btn" type="submit">Записаться в сервис</button>
+          <button class="header__btn popup-sv" type="submit">Записаться в сервис</button>
         </div>
       </div>
     </div>
@@ -134,7 +134,7 @@
           </a>
         </div>
         <div class="header__a-block">
-          <a href="#" class="header__block header__con">
+          <a href="#contact" class="header__block header__con">
             <p class="con">Контакты </p>
           </a>
         </div>

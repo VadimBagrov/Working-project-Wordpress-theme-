@@ -322,7 +322,25 @@ Template Name: onas
       </div>
 
     </section>
-
+    <div class="forma__main forma__main--none">
+        <div class="forma__close">
+          <img class='forma__cl-png' src="http://localhost:8888/wp-content/uploads/2024/05/close-red.png" alt="close">
+        </div>
+        <div class="forma__div">
+          <p class="forma__text-m">
+            Оставьте ваши контакты
+          </p>
+        </div>
+        <form class="" action="#" method="post">
+          <div class="forma__text-top">
+          </div>
+          <div class="forma__text-bottom">
+          </div>
+          <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
+        </form>
+        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+          обработку ваших <a href="#">Персональных данных</a></p>
+      </div>
     <section class="question container">
       <div class="question__left">
         <h3 class="question__title">Остались вопросы?</h3>

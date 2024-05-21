@@ -16,140 +16,69 @@ Template Name: mitsubishi
 
     <section class="car container">
       <div class="car__img">
-        <img class="car__photo" src="images/src/outlander.png" alt="mitsubishi">
+        <img class="car__photo" src="<?php the_field('gl-photo'); ?>" alt="mitsubishi">
       </div>
       <div class="car__right">
         <h1 class="car__title">Ремонт двигателя <span class="colortext">Mitsubishi (Митсубиси)</span></h1>
         <div class="car__works">
-          <a href="#" class="car__work ">
-            <img class="car__images" src="images/src/dvs1.svg" alt="dvig">
-            <p class="car__text hover-text">Капитальный ремонт двигателей</p>
-          </a>
 
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/engine_6ek94yxxf8e4.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт дизельного двигателя</p>
+        <?php global $post; $myposts = get_posts([ 'numberposts' => -1, 'tag' => 'каталог-услугбренды',]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+          <a href="<?php the_content() ?>" class="car__work ">
+            <?php the_post_thumbnail('full', array('class' => 'car__images')); ?>
+            <p class="car__text hover-text"><?php the_title() ?></p>
           </a>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
 
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/motor_lh2wtmmwqq25.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт ГБЦ двигателя</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/check_engine_mzlrq92bc0t6.svg" alt="dvig">
-            <p class="car__text hover-text">Диагностика двигателя</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/motor_69xol7zxvoaa.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт ТНВД</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/engine_msmxies68w65.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт блока цилиндров</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/turbine_hppipci8dsa0.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт турбин</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/repair_rf60k0o8in1z.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт форсунок</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/timing_belt_muyk5mjqwvrs.svg" alt="dvig">
-            <p class="car__text hover-text">Замена цепи/ремня ГРМ</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/maintenance_k6wvqk9b5eou 1.svg" alt="dvig">
-            <p class="car__text hover-text">Регулировка клапанов</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/maintenance_lu3mnj7ywcng.svg" alt="dvig">
-            <p class="car__text hover-text">Техническое обслуживание авто</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/cooling_7i63waglehvc.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт системы охлаждения</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/manual_transmission_yv8ymawhawmw.svg" alt="dvig">
-            <p class="car__text hover-text">Ремонт МКПП</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/circulation_1f2cbymjqkxf.svg" alt="dvig">
-            <p class="car__text hover-text">Промывка систем автомобиля</p>
-          </a>
-
-          <a href="#" class="car__work">
-            <img class="car__images" src="images/src/chip_208ilogv4xrr.svg" alt="dvig">
-            <p class="car__text hover-text">Чип-тюнинг</p>
-          </a>
         </div>
       </div>
     </section>
-
+    <div class="forma__main forma__main--none">
+        <div class="forma__close">
+          <img class='forma__cl-png' src="http://localhost:8888/wp-content/uploads/2024/05/close-red.png" alt="close">
+        </div>
+        <div class="forma__div">
+          <p class="forma__text-m">
+            Оставьте ваши контакты
+          </p>
+        </div>
+        <form class="" action="#" method="post">
+          <div class="forma__text-top">
+          </div>
+          <div class="forma__text-bottom">
+          </div>
+          <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
+        </form>
+        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+          обработку ваших <a href="#">Персональных данных</a></p>
+      </div>
     <section class="mit container">
       <h3 class="mit__title advantages__title"> Выбор модели</h3>
       <div class="mit__block">
-        <img class="mit__prev prev" src="/images/dist/left__arr.png" alt="arrow">
+        <img class="mit__prev prev" src="<?php echo B__IMG ?>/assets/images/dist/left__arr.png" alt="arrow">
         <div class="mit__blocks slider3 multiple-items2">
-          <div class="mit__car">
-            <img class="mit__img" src="/images/src/pajero_sport.png" alt="images">
+
+        <?php global $post; $myposts = get_posts([ 'numberposts' => -1, 'tag' => 'выбор-модели-слайдер',]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+
+            <div class="mit__car">
+            <?php the_post_thumbnail('full', array('class' => 'mit__img')); ?>
             <div class="mit__bottom">
-              <p class="mit__name">Pajero sport</p>
+              <p class="mit__name"><?php the_title() ?></p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
 
-          <div class="mit__car">
-            <img class="mit__img" src="/images/src/outlander2.png" alt="images">
-            <div class="mit__bottom">
-              <p class="mit__name">Oulander</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit__car">
-            <img class="mit__img" src="/images/src/pajero.png" alt="images">
-            <div class="mit__bottom">
-              <p class="mit__name">Pajero</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit__car">
-            <img class="mit__img" src="/images/src/lancer.png" alt="images">
-            <div class="mit__bottom">
-              <p class="mit__name">Lancer</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit__car">
-            <img class="mit__img" src="/images/src/asx.png" alt="images">
-            <div class="mit__bottom">
-              <p class="mit__name">Asx</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit__car">
-            <img class="mit__img mit__l200" src="/images/src/l200.png" alt="images">
-            <div class="mit__bottom">
-              <p class="mit__name ">L200</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
+        
+
 
         </div>
-        <img class="mit__next next" src="/images/dist/right__arr.png" alt="arrow">
+        <img class="mit__next next" src="<?php echo B__IMG ?>/assets/images/dist/right__arr.png" alt="arrow">
       </div>
       <button class="mit__all" type="submit">Показать все</button>
     </section>
@@ -159,7 +88,7 @@ Template Name: mitsubishi
       <div class="mit2__block">
         <div class="mit2__blocks">
           <div class="mit2__car">
-            <img class="mit2__img" src="/images/src/pajero_sport.png" alt="images">
+            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/pajero_sport.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name">Pajero Sport</p>
               <button class="mit__send" type="submit">Записаться</button>
@@ -167,35 +96,35 @@ Template Name: mitsubishi
           </div>
 
           <div class="mit2__car">
-            <img class="mit2__img" src="/images/src/outlander2.png" alt="images">
+            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/outlander2.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name">Oulander</p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
           <div class="mit2__car">
-            <img class="mit2__img" src="/images/src/pajero.png" alt="images">
+            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/pajero.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name">Pajero</p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
           <div class="mit2__car">
-            <img class="mit2__img" src="/images/src/lancer.png" alt="images">
+            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/lancer.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name">Lancer</p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
           <div class="mit2__car">
-            <img class="mit2__img" src="/images/src/asx.png" alt="images">
+            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/asx.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name">Asx</p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
           <div class="mit2__car">
-            <img class="mit2__img mit__l200" src="/images/src/l200.png" alt="images">
+            <img class="mit2__img mit__l200" src="<?php echo B__IMG ?>/assets/images/src/l200.png" alt="images">
             <div class="mit2__bottom">
               <p class="mit__name ">L200</p>
               <button class="mit__send" type="submit">Записаться</button>
@@ -233,33 +162,27 @@ Template Name: mitsubishi
         </p>
       </button>
     </section>
-
     <section class="out container">
       <h3 class="out__title advantages__title"> Примеры наших работ</h3>
       <div class="out__imgs">
-        <img class="prev " src="/images/dist/left__arr.png" alt="arrow">
+        <img class="prev mit__prev" src="<?php echo B__IMG ?>/assets/images/dist/left__arr.png" alt="arrow">
         <div class="slider2 multiple-items">
-          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-1') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-2') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-3') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-4') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-5') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-6') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-7') ?>" alt="images">
 
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
         </div>
-        <img class="next" src="/images/dist/right__arr.png" alt="arrow">
+        <img class="next mit__next" src="<?php echo B__IMG ?>/assets/images/dist/right__arr.png" alt="arrow">
       </div>
     </section>
 
@@ -288,26 +211,26 @@ Template Name: mitsubishi
       <h5 class="advantages__title">Почему выбирают наш автотехцентр?</h5>
       <div class="advantages__blocks">
         <div class="advantages__block">
-          <img class="advantages__img" src="images/dist/heart.svg" alt="heart">
+          <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/heart.svg" alt="heart">
           <p class="advantages__top">Любимое дело</p>
           <p class="advantages__bottom">Стаж мастеров<br />минимум от 10 лет.<br />Они выбирали<br />любимую проффесию.
           </p>
         </div>
 
         <div class="advantages__block advantages__block2">
-          <img class="advantages__img" src="images/dist/security.svg" alt="security">
+          <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/security.svg" alt="security">
           <p class="advantages__top">Надежность</p>
           <p class="advantages__bottom">90% запчастей<br />ориигнальные и всегда есть<br />в наличии на складе.</p>
         </div>
 
         <div class="advantages__block">
-          <img class="advantages__img" src="images/dist/approve.svg" alt="approve">
+          <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/approve.svg" alt="approve">
           <p class="advantages__top">Опыт с 99 года</p>
           <p class="advantages__bottom">50% механиков<br />Работают со дня<br /> основания техцентра.</p>
         </div>
 
         <div class="advantages__block">
-          <img class="advantages__img" src="images/dist/location.svg" alt="location">
+          <img class="advantages__img" src="<?php echo B__IMG ?>/assets/images/dist/location.svg" alt="location">
           <p class="advantages__top">Удобное<br />расположение</p>
           <p class="advantages__bottom">В 400 метрах<br />
             от метро Стахановская.</p>
@@ -328,21 +251,21 @@ Template Name: mitsubishi
                 <div class="service__bl">
                   <p class="service__text">Двигатель</p>
                 </div>
-                <img class="service__arrow" src="images/dist/arrow.svg" alt="arrow">
+                <img class="service__arrow" src="<?php echo B__IMG ?>/assets/images/dist/arrow.svg" alt="arrow">
               </button>
 
               <button class="service__left-block service__tr service__tran">
                 <div class="service__bl">
                   <p class="service__text">Трансмиссия</p>
                 </div>
-                <img class="service__arrow" src="images/dist/arrow.svg" alt="arrow">
+                <img class="service__arrow" src="<?php echo B__IMG ?>/assets/images/dist/arrow.svg" alt="arrow">
               </button>
 
-              <button class="service__left-block service__obs service__obsl">
+              <button class="service__left-block service__obs service__obsl catalog__more catalog__bottom-bl caralog__mob">
                 <div class="service__bl">
                   <p class="service__text">Обслуживание</p>
                 </div>
-                <img class="service__arrow" src="images/dist/arrow.svg" alt="arrow">
+                <img class="service__arrow" src="<?php echo B__IMG ?>/assets/images/dist/arrow.svg" alt="arrow">
               </button>
             </div>
           </div>
@@ -678,7 +601,7 @@ Template Name: mitsubishi
 
           <div class="contacts__addres">
             <div class="contacts__adress-top">
-              <img class="contacts__img" src="images/dist/addres.svg" alt="addres">
+              <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/addres.svg" alt="addres">
               <h6 class="contacts__block-title contacts__addres-t">Адрес</h6>
             </div>
             <p class="contacts__block-text">г. Москва ул.Шоссе энтузиастов 31с40</p>
@@ -686,7 +609,7 @@ Template Name: mitsubishi
           <div class="contacts__bl-bottom">
             <div class="contacts__phone">
               <div class="contacts__phone-top">
-                <img class="contacts__img" src="images/dist/phone.svg" alt="addres">
+                <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/phone.svg" alt="addres">
                 <h6 class="contacts__block-title contacts__phone-t">Телефоны</h6>
               </div>
               <p class="contacts__block-text hover-text">+7 (495) 701-81-41<br />+7 (916) 755-81-41</p>
@@ -694,7 +617,7 @@ Template Name: mitsubishi
 
             <div class="contacts__email">
               <div class="contacts__email-top">
-                <img class="contacts__img" src="images/dist/email.svg" alt="addres">
+                <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/email.svg" alt="addres">
                 <h6 class="contacts__block-title contacts__email-t hover-text">Email</h6>
               </div>
               <p class="contacts__block-tex hover-textt">motoristdvs@info.ru</p>
@@ -702,7 +625,7 @@ Template Name: mitsubishi
           </div>
           <div class="contacts__work">
             <div class="contacts__work-top">
-              <img class="contacts__img" src="images/dist/clock1.svg" alt="addres">
+              <img class="contacts__img" src="<?php echo B__IMG ?>/assets/images/dist/clock1.svg" alt="addres">
               <h6 class="contacts__block-title contacts__work-t">Режим работы</h6>
             </div>
             <p class="contacts__block-text">

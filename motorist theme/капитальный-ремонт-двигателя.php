@@ -34,14 +34,32 @@ Template Name: капитальный-ремонт-двигателя
             <h5 class="main-block__text"><?php the_field('preim-4') ?></h5>
           </div>
         </div>
-        <a href="#forma" class='main-block__form-cr'>
+        <a  class='main-block__form-cr popup-sva'>
         <button class="main-block__btn" type='submit'>Записаться в сервис</button>
         </a>
       </div>
 
 
-    </section>
-
+ </section>
+ <div class="forma__main forma__main--none">
+        <div class="forma__close">
+          <img class='forma__cl-png' src="http://localhost:8888/wp-content/uploads/2024/05/close-red.png" alt="close">
+        </div>
+        <div class="forma__div">
+          <p class="forma__text-m">
+            Оставьте ваши контакты
+          </p>
+        </div>
+        <form class="" action="#" method="post">
+          <div class="forma__text-top">
+          </div>
+          <div class="forma__text-bottom">
+          </div>
+          <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
+        </form>
+        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+          обработку ваших <a href="#">Персональных данных</a></p>
+      </div>
     <section class="car container car3">
       <div class="car__img catalog__more mit__all">
         <img class="car__photo" src="<?php echo B__IMG ?>/assets/images/src/outlander.png" alt="mitsubishi">
@@ -160,25 +178,20 @@ Template Name: капитальный-ремонт-двигателя
       <div class="out__imgs">
         <img class="prev mit__prev" src="<?php echo B__IMG ?>/assets/images/dist/left__arr.png" alt="arrow">
         <div class="slider2 multiple-items">
-          <img class="out__img" src="<?php echo B__IMG ?>/assets//images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-1') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets//images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-2') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-3') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-4') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-5') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/537BD8CB-B697-40A1-A371-7BCE7D94FE67_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-6') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/27E037E6-EB74-4F7D-AAB3-C9DD5A650F76_4_5005_c 1.png" alt="images">
+          <img class="out__img" src="<?php the_field('izo-7') ?>" alt="images">
 
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/43B5C2AE-1622-4B68-9F67-E7ED342D07BC_4_5005_c 1.png" alt="images">
-
-          <img class="out__img" src="<?php echo B__IMG ?>/assets/images/src/C9012258-2914-4495-9D1E-3421566F28B5_4_5005_c 1.png" alt="images">
         </div>
         <img class="next mit__next" src="<?php echo B__IMG ?>/assets/images/dist/right__arr.png" alt="arrow">
       </div>
