@@ -333,13 +333,13 @@ Template Name: blog
           </p>
         </div>
         <form class="" action="#" method="post">
-          <div class="forma__text-top">
+          <div class="forma__text-t">
           </div>
-          <div class="forma__text-bottom">
+          <div class="forma__text-b">
           </div>
           <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
         </form>
-        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+        <p class="forma__d forma__pol">Оставляя заявку вы даёте согласие на
           обработку ваших <a href="#">Персональных данных</a></p>
       </div>
     <section class="question container">

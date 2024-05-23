@@ -45,13 +45,13 @@ Template Name: mitsubishi
           </p>
         </div>
         <form class="" action="#" method="post">
-          <div class="forma__text-top">
+          <div class="forma__text-t">
           </div>
-          <div class="forma__text-bottom">
+          <div class="forma__text-b">
           </div>
           <?php echo do_shortcode('[contact-form-7 id="537b6f6" title="Контактная форма"]') ?>
         </form>
-        <p class="forma__data forma__pol">Оставляя заявку вы даёте согласие на
+        <p class="forma__d forma__pol">Оставляя заявку вы даёте согласие на
           обработку ваших <a href="#">Персональных данных</a></p>
       </div>
     <section class="mit container">
@@ -69,7 +69,7 @@ Template Name: mitsubishi
             <?php the_post_thumbnail('full', array('class' => 'mit__img')); ?>
             <div class="mit__bottom">
               <p class="mit__name"><?php the_title() ?></p>
-              <button class="mit__send" type="submit">Записаться</button>
+              <button class="mit__send popup-sva" type="submit">Записаться</button>
             </div>
           </div>
 
@@ -87,49 +87,21 @@ Template Name: mitsubishi
       <h3 class="mit2__title advantages__title"> Выбор модели</h3>
       <div class="mit2__block">
         <div class="mit2__blocks">
-          <div class="mit2__car">
-            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/pajero_sport.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name">Pajero Sport</p>
+        <?php global $post; $myposts = get_posts([ 'numberposts' => -1, 'tag' => 'выбор-модели-слайдер',]);
+        if( $myposts ){
+        foreach( $myposts as $post ){
+          setup_postdata( $post ); ?>
+
+            <div class="mit__car">
+            <?php the_post_thumbnail('full', array('class' => 'mit__img')); ?>
+            <div class="mit__bottom">
+              <p class="mit__name"><?php the_title() ?></p>
               <button class="mit__send" type="submit">Записаться</button>
             </div>
           </div>
 
-          <div class="mit2__car">
-            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/outlander2.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name">Oulander</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit2__car">
-            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/pajero.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name">Pajero</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit2__car">
-            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/lancer.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name">Lancer</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit2__car">
-            <img class="mit2__img" src="<?php echo B__IMG ?>/assets/images/src/asx.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name">Asx</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
-          <div class="mit2__car">
-            <img class="mit2__img mit__l200" src="<?php echo B__IMG ?>/assets/images/src/l200.png" alt="images">
-            <div class="mit2__bottom">
-              <p class="mit__name ">L200</p>
-              <button class="mit__send" type="submit">Записаться</button>
-            </div>
-          </div>
+      <?php } } wp_reset_postdata(); // Сбрасываем $post ?>
+        
 
         </div>
       </div>

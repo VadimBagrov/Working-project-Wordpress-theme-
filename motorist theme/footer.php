@@ -14,23 +14,23 @@
       </div>
 
       <div class="footer__two">
-        <a href="#" class="footer__brand">
+        <a href="/toyota/" class="footer__brand">
           <img class="footer__img-brand footer__toyota" src="<?php echo B__IMG ?>/assets/images/dist/toyota.svg" alt="toyota">
           <p class="footer__text-brand hover-text">Toyota</p>
         </a>
-        <a href="#" class="footer__brand">
+        <a href="/lexus/" class="footer__brand">
           <img class="footer__img-brand footer__lexus" src="<?php echo B__IMG ?>/assets/images/dist/lexus.svg" alt="lexus">
           <p class="footer__text-brand hover-text">Lexus</p>
         </a>
-        <a href="#" class="footer__brand">
+        <a href="/nissan/" class="footer__brand">
           <img class="footer__img-brand footer__nissan" src="<?php echo B__IMG ?>/assets/images/dist/nissan.svg" alt="nissan">
           <p class="footer__text-brand hover-text">Nissan</p>
         </a>
-        <a href="#" class="footer__brand">
+        <a href="/hyundai/" class="footer__brand">
           <img class="footer__img-brand footer__hyundai" src="<?php echo B__IMG ?>/assets/images/dist/hyundai.svg" alt="hyundai">
           <p class="footer__text-brand hover-text">Hyundai</p>
         </a>
-        <a href="#" class="footer__brand">
+        <a href="/kia/" class="footer__brand">
           <img class="footer__img-brand footer__kia" src="<?php echo B__IMG ?>/assets/images/dist/kia.svg" alt="kia">
           <p class="footer__text-brand hover-text">Kia</p>
         </a>
@@ -39,13 +39,13 @@
         <div class="footer__three">
           <ul class="footer__ul-three">
             <li class="footer__li-three">
-              <a class="footer__a-three hover-text" href="#"><span class="colortext">-</span> Ремонт двигателя</a>
+              <a class="footer__a-three hover-text" href="/ремонт-двигателя/"><span class="colortext">-</span> Ремонт двигателя</a>
             </li>
             <li class="footer__li-three">
-              <a class="footer__a-three hover-text" href="#"><span class="colortext">-</span> Ремонт трансмиссии</a>
+              <a class="footer__a-three hover-text" href="/ремонт-трансмиссии/"><span class="colortext">-</span> Ремонт трансмиссии</a>
             </li>
             <li class="footer__li-three">
-              <a class="footer__a-three hover-text" href="#"><span class="colortext">-</span> Обслуживание
+              <a class="footer__a-three hover-text" href="/обслуживание-автомобиля/"><span class="colortext">-</span> Обслуживание
                 автомобиля</a>
             </li>
           </ul>
@@ -54,13 +54,13 @@
         <div class="footer__four">
           <ul class="footer__ul-four">
             <li class="footer__li-four">
-              <a class="footer__a-four hover-text" href="#"><span class="colortext">-</span> Чип-тюнинг</a>
+              <a class="footer__a-four hover-text" href="/чип-тюнинг/"><span class="colortext">-</span> Чип-тюнинг</a>
             </li>
             <li class="footer__li-four">
-              <a class="footer__a-four hover-text" href="#"><span class="colortext">-</span> Ремонт турбин</a>
+              <a class="footer__a-four hover-text" href="/ремонт-турбин/"><span class="colortext">-</span> Ремонт турбин</a>
             </li>
             <li class="footer__li-four">
-              <a class="footer__a-four hover-text" href="#"><span class="colortext">-</span> Диагностика двигателя</a>
+              <a class="footer__a-four hover-text" href="/диагностика-двигателя/"><span class="colortext">-</span> Диагностика двигателя</a>
             </li>
           </ul>
         </div>

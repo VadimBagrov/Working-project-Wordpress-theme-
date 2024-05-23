@@ -144,7 +144,7 @@
           </a>
         </div>
         <div class="header__a-block">
-          <a href="#" class="header__block header__onas">
+          <a href="/onas/" class="header__block header__onas">
             <p class="on">О нас
             </p>
           </a>
